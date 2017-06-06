@@ -6,7 +6,10 @@ $(document).ready(function() {
     var stop = parseInt($("input#number1").val());
     var add = parseInt($("input#number2").val());
 
-
+    if (add >= stop) {
+      alert("Your Count By number must be less than Count To");
+      $("#count-form").reset();
+    }
 
     for (var i = 0; i <= stop; i+= add) {
       $("ul#counting").append('<li>' + i + '</li>');
